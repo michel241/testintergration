@@ -5,6 +5,9 @@ body {
     margin:0px;
 
   }
+  a{
+    color: #000000;
+  }
 
   .wrapper{
     max-width: 755px;
@@ -48,53 +51,6 @@ body {
 
 /* columns widths */
 
-.col-span-1 {
-  flex-basis: 8.3333%;
-}
-
-.col-span-2 {
-  flex-basis: 16.6666%; 
-}
-
-.col-span-3 {
-  flex-basis: 25%;
-}
-
-.col-span-4 {
-  flex-basis: 33.3333%;
-}
-
-.col-span-5 {
-  flex-basis: 41.6666%;
-}
-
-.col-span-6 {
-  flex-basis: 50%;
-}
-
-.col-span-7 {
-  flex-basis: 58.3333%;
-}
-
-.col-span-8 {
-  flex-basis: 66.6666%;
-}
-
-.col-span-9 {
-  flex-basis: 75%;
-}
-
-.col-span-10 {
-  flex-basis: 83.3333%;
-}
-
-.col-span-11 {
-  flex-basis: 91.6666%;
-}
-
-.col-span-12 {
-  flex-basis: 100%;
-}
 
 
 
@@ -165,7 +121,7 @@ body {
 #lECOTLUMIN .menu-icon {
   cursor: pointer;
   display: inline-block;
-  float: right;
+  float: left;
   padding: 10px 10px;
   position: relative;
   user-select: none;
