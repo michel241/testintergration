@@ -1,0 +1,596 @@
+
+/*styles principaux*/
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin:0px;
+
+  }
+
+  .wrapper{
+    max-width: 755px;
+    margin: 0px auto;
+}
+.row {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.col {
+  flex: 1 1 8%;
+  margin: 0 0 0.5rem 0;
+  padding: 0.5em 10px;
+  box-sizing: border-box;
+}
+
+/* nested grids */
+.row .row, .row.nested {
+  flex: 1 1 auto;
+  margin-top: -0.5em;
+}
+
+/* full width grids */
+.row.wide-fit {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+/* center grids */
+.row.center {
+  justify-content: center;
+}
+
+.center .col {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+/* columns widths */
+
+.col-span-1 {
+  flex-basis: 8.3333%;
+}
+
+.col-span-2 {
+  flex-basis: 16.6666%; 
+}
+
+.col-span-3 {
+  flex-basis: 25%;
+}
+
+.col-span-4 {
+  flex-basis: 33.3333%;
+}
+
+.col-span-5 {
+  flex-basis: 41.6666%;
+}
+
+.col-span-6 {
+  flex-basis: 50%;
+}
+
+.col-span-7 {
+  flex-basis: 58.3333%;
+}
+
+.col-span-8 {
+  flex-basis: 66.6666%;
+}
+
+.col-span-9 {
+  flex-basis: 75%;
+}
+
+.col-span-10 {
+  flex-basis: 83.3333%;
+}
+
+.col-span-11 {
+  flex-basis: 91.6666%;
+}
+
+.col-span-12 {
+  flex-basis: 100%;
+}
+
+
+
+.container3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.container3 #termsofUse{
+    color: #9b9b9b !important;
+
+}
+/*Barre de navigation*/
+
+#lECOTLUMIN {
+  height: 22px;
+  color: #ffffff;
+  font-family: "OpenSans-Bold";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+}
+
+#lECOTLUMIN ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+#lECOTLUMIN p{
+    text-align: right;
+}
+
+#lECOTLUMIN ul li{
+    list-style: none;
+    display: inline-block;
+}
+#lECOTLUMIN   ul li a{
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "OpenSans-Bold";
+}
+
+#lECOTLUMIN li a:hover,
+#lECOTLUMIN .menu-btn:hover {
+  color: yellow;
+}
+
+
+/* menu */
+
+#lECOTLUMIN .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+  background-image: url("../assets/header-bg.png");
+  background-size: cover;
+}
+
+/* menu icon */
+
+#lECOTLUMIN .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 10px 10px;
+  position: relative;
+  user-select: none;
+  margin-right: 20px;
+  margin-top: 20px
+}
+
+#lECOTLUMIN .menu-icon .navicon {
+  background: #ffffff;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+#lECOTLUMIN .menu-icon .navicon:before,
+#lECOTLUMIN .menu-icon .navicon:after {
+  background: #ffffff;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+#lECOTLUMIN .menu-icon .navicon:before {
+  top: 5px;
+}
+
+#lECOTLUMIN .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+#lECOTLUMIN .menu-btn {
+  display: none;
+}
+
+#lECOTLUMIN .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+#lECOTLUMIN .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+#lECOTLUMIN .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+#lECOTLUMIN .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+#lECOTLUMIN .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+#lECOTLUMIN .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+@media (min-width: 375px) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+ #lECOTLUMIN .menu {
+   display: inline-block;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+
+/* Header*/
+
+#header{
+  position: relative;
+  z-index: 1;
+  margin-top: 10px;
+  background-image: url("../assets/header-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 683px;
+  margin-top: -10px;
+
+}
+
+#logo{
+  
+  height: 344px;
+}
+
+#logo img{
+ 
+  margin-top: 40vh; /* poussé de la moitié de hauteur de viewport */
+  transform: translateY(-40%); 
+}
+
+
+
+/* Content */
+
+#bitmatImg img{
+   height: 600px;
+}
+
+#starWarsTText{
+  width: 380px;
+  height: 1174px;
+  font-family: "OpenSans-Bold";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+}
+#starWarsTh {
+ width: 310px;
+  height: 1464px;
+  font-family: "OpenSans-Bold";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+}
+
+
+
+
+#maskBitmap {
+  height: 500px;
+  background-image: url("../assets/kiloren-2x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Article*/
+#Post {
+  width: 780px;
+  height: 631px;
+}
+
+#Post  p{  
+    overflow: hidden;
+    padding: 10px;
+}
+
+img.postImage{
+  float: left;
+  margin-right: 10px;
+}
+.titlePost{
+  text-align: center;
+  font-weight: 500px;
+  font-size: bold
+}
+#maskBitmapBottom{
+  margin-bottom: -20px;
+  height: 250px;
+  background-image: url("../assets/stormtroopers-2x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+
+
+
+/*Footer*/
+
+#footer {
+   height: 272px;
+  text-align: center;
+  color: #9b9b9b;
+  background-image: url("../assets/darthvader_2x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#footer #footerTop{
+ padding-top: 60px; /* poussé de la moitié de hauteur de viewport */
+}
+
+/*boutons*/
+.button-group{
+    font-size: 0;
+}
+.button-group li{
+    display: inline-block;
+}
+.button-group li a{
+    border-radius: 0;
+}
+
+.button a{
+    text-align: center;
+    color: #9b9b9b;
+    font-size: 30pt;
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+}
+.button a:hover{
+    background-color: #grey;
+}
+
+
+/*sticky*/
+.sticky {
+  position: fixed;    
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+/*Media queries*/
+
+@media (min-width: 375px){
+    .wrapper{
+      width: 375px;
+    }
+    #bitmatImg{
+      display: none;
+    }
+    #starWarsTText{
+       flex-basis: 83.3333%;
+       text-align: center;
+
+    }
+    #maskBitmap {
+      height: 400px;
+      background-image: url("../assets/kiloren.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+   #header{
+    position: relative;
+    z-index: 1;
+    margin-top: 10px;
+    background: url("../assets/header.png") no-repeat center center  ;
+    background-size: cover;
+    height: 400px;
+    margin-top: -10px;
+
+    }
+    .starWarsTTextImag{
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
+
+    #logo{
+      display: none;
+    }
+
+    .postImageText{
+      flex-basis: 83.3333%;
+      text-align: center;
+    }
+
+    #footerTop{
+      display: none;
+    }
+    #termsofUse{
+       flex-basis: 41.6666%;
+       margin-top: 40px;
+         width: 185px;
+        height: 90px;
+        font-family: OpenSans;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: center;
+    }
+    #footer .row.center a{
+       color: grey;
+    }
+   #footer {
+     height: 272px;
+        text-align: center;
+        color: #9b9b9b;
+        background-image: url("../assets/darthvader_2x.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+    #yourCalifo{
+        flex-basis: 41.6666%;
+        margin-top: 40px;
+        width: 185px;
+        height: 83px;
+        font-family: OpenSans;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: center;
+    }
+    #fOLLOWSTAR {
+      flex-basis: 41.6666%;
+      width: 185px;
+      height: 22px;
+      font-family: OpenSans;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 30px;
+      text-align: center;
+      margin-top: 77px;
+    }
+
+    .row #socialNetwork {
+       flex-basis: 41.6666%;
+      font-family: OpenSans;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 30px;
+      text-align: center; 
+      height: 28px;
+      margin-top: 77px;
+    }
+
+}
+
+
+@media (min-width: 1024px){
+    .wrapper{
+      width: 1024px;
+    }
+    #starWarsTText{
+       flex-basis: 41.6666%;
+       margin-right: 10px;
+       width: 380px;
+       height: 1174px;
+       font-family: "OpenSans-Bold";
+       font-size: 20px;
+       font-weight: 400;
+       line-height: 22px;
+       text-align: unset;
+    }
+    #bitmatImg{
+       flex-basis: 41.6666%;
+       margin-left: 30px;
+       display: block;
+    }
+
+
+    #header{
+      position: relative;
+      z-index: 1;
+      background-image: url("../assets/header-bg.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 683px;
+      margin-top: -20px;
+
+    }
+
+    #logo{
+      display: block;
+      height: 344px;
+      top:50%;
+      transform:translateY(-20%);
+    }
+
+    #footer {
+   height: 272px;
+    text-align: center;
+    color: #9b9b9b;
+    background-image: url("../assets/darthvader_2x.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+  #footer #footerTop{
+   padding-top: 60px; /* poussé de la moitié de hauteur de viewport */
+  }
+
+   #footerTop{
+      display: block;
+    }
+    #termsofUse{
+        flex-basis: 25%;
+
+    }
+    #yourCalifo{
+        flex-basis: 25%;
+
+    }
+    #fOLLOWSTARITEM{
+        flex-basis: 25%;
+
+    }
+    #fOLLOWSTAR{
+      flex-basis: 100%;
+      margin-top: 50px;
+    }
+    .row #socialNetwork{
+      flex-basis: 100%;
+      margin-top: -0.5em;
+
+    }
+
+
+    #lECOTLUMIN li a {
+      padding: 20px 30px;
+    }
+    #lECOTLUMIN .menu {
+      max-height: none;
+      width: 100%;
+      margin-top: -10px;
+      text-align: center;
+    }
+    #lECOTLUMIN .menu-icon {
+      display: none;
+    }
+    .sticky {
+      position: relative;
+      top: 0;
+    }
+
+
+   
+
+}
